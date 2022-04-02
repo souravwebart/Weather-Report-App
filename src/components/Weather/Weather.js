@@ -1,7 +1,10 @@
+
+
 import React, { useEffect, useState } from 'react'
 import './Weather.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
+
 
 
 function Weather() {
@@ -9,13 +12,14 @@ function Weather() {
     const [city, setCity] = useState(null);
     const [search, setSearch] = useState("Agartala");
 
+
     const changeevent = (e) => {
         e.preventDefault();
         setSearch(e.target.value)
     };
 
     const fetchData = async () => {
-        const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=9e33ed9168af95b45ab8825e5f43428d`
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=${process.env.REACT_APP_ENV}`
         const response = await fetch(url);
         const data = await response.json();
         console.log(data);
