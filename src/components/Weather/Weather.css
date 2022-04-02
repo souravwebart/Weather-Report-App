@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.main-box {
+  width: 80%;
+  height: 80vh;
+  background-color: #f4f4f4f0;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 25px -5px rgb(0 0 0 / 50%);
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  margin: 70px auto;
+}
+.input-box {
+  padding: 20px;
+  margin-top: 5%;
+}
+.input-box input {
+  padding: 10px;
+  width: 100%;
+  outline: none;
+  border: 1px solid #0000002e;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.icon {
+  font-size: 40px;
+  color: red;
+}
+.title {
+  text-align: center;
+  margin: 70px auto 0px auto;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  color: red;
+  font-size: 50px;
+}
+.titlespan {
+  color: black;
+}
+
+.info h2 {
+  font-size: 40px;
+  margin-top: 3%;
+}
+.info .temp {
+  font-size: 25px;
+  margin: 20px 0 20px 0;
+  text-align: center;
+  font-weight: 600;
+}
+.location {
+  text-align: center;
+}
+.info h3 {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.wave1 {
+  opacity: 0.3;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  background: #35c000;
+  width: 50rem;
+  height: 50rem;
+  margin-top: -20rem;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 3000ms infinite linear;
+  z-index: 1;
+}
+.wave2 {
+  animation: drift 5000ms infinite linear;
+  z-index: 2 !important;
+  opacity: 0.4;
+  background: #f50cbf;
+  position: absolute;
+  /* top: 120%; */
+  right: 50%;
+  width: 50rem;
+  height: 50rem;
+  margin-top: -67rem;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+}
+.wave3 {
+  animation: drift 7000ms infinite linear;
+  z-index: 3 !important;
+  opacity: 0.1;
+}
+.main-box::after {
+  content: "";
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  transform: translate3d(0, 0, 0);
+}
+@keyframes drift {
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
+.Nofound {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+}
