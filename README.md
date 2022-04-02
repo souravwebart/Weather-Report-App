@@ -1,4 +1,4 @@
-![WeatherZone](/Public/weather.png)
+![WeatherZone](/weather/Public/weather.png)
 
 # Getting Started with Create React App
 
